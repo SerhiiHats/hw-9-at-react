@@ -5,16 +5,16 @@ import "./Layout.scss"
 const Layout = () => {
   return (
     <>
-      <header> Header</header>
-      <div>
-        <nav>
+      <header className={"header"}> Header</header>
+      <div className={"containerMain"}>
+        <nav className={"nav"}>
           Menu
         </nav>
-        <main>
+        <main className={"main"}>
           <Outlet/>
         </main>
       </div>
-      <footer>small; 2023 - footer</footer>
+      <footer className={"footer"}>2023 - footer</footer>
     </>
   );
 };
