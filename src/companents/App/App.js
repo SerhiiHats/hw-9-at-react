@@ -1,10 +1,15 @@
 import './App.css';
+import {Route, Routes} from "react-router";
+import Layout from "../../layout/Layout";
+import MainPage from "../../pages/MainPage";
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <Routes>
+      <Route path={"/"} element={<Layout/>}>
+        <Route index element={<MainPage/>}/>
+      </Route>
+    </Routes>
   );
 }
 
