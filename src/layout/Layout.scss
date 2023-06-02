@@ -4,10 +4,30 @@ $widthNav: $size * 20;
 $heightHeader: $size * 10;
 $heightFooter: $size * 10;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   height: $heightHeader;
   background-color: $colorBg;
   color: $colorDefault;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-family: $fontDancingScript;
+    margin-left: $size;
+    font-size: $size * 5;
+  }
+
+  p{
+    margin-right: $size;
+    font-size: $size * 2;
+
+  }
 }
 
 .containerMain {
@@ -19,15 +39,17 @@ $heightFooter: $size * 10;
     min-height: calc(100vh - $heightHeader - $heightFooter);
   }
 
-  .main{
+  .main {
     width: calc(100% - $widthNav);
-    background-color: lightblue;
+    background-color: $colorBg3;
   }
 }
 
-.footer{
-    height: $heightFooter;
-    background-color: $colorBg;
-    color: $colorDefault;
-
+.footer {
+  height: $heightFooter;
+  background-color: $colorBg;
+  color: $colorDefault;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
