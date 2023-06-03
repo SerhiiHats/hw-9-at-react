@@ -15,14 +15,13 @@ const ProductPage = () => {
     useEffect(() => {
       // const urlFromState = location.pathname.split("/");
       // const category = urlFromState.pop();
-
       const category = location.state.items;
       axios(urlProduct)
         .then(response => setProduct(response.data.filter(item => item.category.includes(category))));
     }, [location]);
 
 
-    function handleClickCard(id) {
+    const handleClickCard = (id) => {
       navigation(`/product/${id}`);
     }
 
@@ -37,7 +36,7 @@ const ProductPage = () => {
         {/*})}*/}
         {product && product.map(item => {
           return (
-            <div onClick={()=>handleClickCard(item.id)}>
+            <div onClick={() => handleClickCard(item.id)}>
               <CardClothes id={item.id} image={item.image} category={item.category} title={item.title}
                            description={item.description}
                            price={item.price} rating={item.rating}/>
