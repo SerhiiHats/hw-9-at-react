@@ -13,8 +13,8 @@ const Layout = () => {
       <div className={"containerMain"}>
         <nav className={"nav"}>
           <NavLink to={"/"}><p>Каталог товарів</p></NavLink>
-          <NavLink to={"product"}><p>Одяг</p></NavLink>
-          <NavLink to={"/"}><p>Техніка</p></NavLink>
+          <NavLink to={"product"} state={{items: "clothing"}}><p>Одяг</p></NavLink>
+          <NavLink to={"product"} state={{items: "electronics"}}><p>Техніка</p></NavLink>
         </nav>
         <main className={"main"}>
           <Outlet/>

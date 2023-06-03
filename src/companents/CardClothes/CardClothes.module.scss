@@ -1,6 +1,6 @@
 @import "src/index";
 
-.cardClothes{
+.cardClothes {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -8,45 +8,54 @@
   max-width: $size * 30;
   background-color: lightgray;
   transition: 0.3s;
+  border-radius: $size;
+
   &:hover {
     box-shadow: 0 0 $size $size * 0.1 gray;
     scale: 1.04;
   }
 
-  .wrapClothes{
+  .wrapClothes {
     & > img {
       width: 100%;
       border-radius: $size;
     }
 
-    .clothesImg{
+    .clothesImg {
 
     }
 
-    .category{
+    .category {
       max-width: $size * 30;
       margin: $size * 0.5 0 $size * 0.5 0;
+      font-size: $size * 1.5;
     }
 
-    .title{
+    .title {
       max-width: $size * 30;
       margin: $size * 0.2 0 $size * 0.2 0;
-      font-size: $size * 1.4;
       font-weight: 500;
+      font-size: $size * 2;
+      color: $colorActive;
     }
 
-    .description{
+    .description {
       max-width: $size * 30;
-      margin: $size * 0.2 0 $size * 0.2 0;
+      margin: $size 0 $size * 0.2 0;
       font-size: $size * 1.4;
-      font-weight: 500;
+      font-weight: 400;
     }
 
-    .wrapPrice{
+    .wrapPrice {
       max-width: $size * 30;
-      margin: $size * 0.2 0 $size * 0.2 0;
+      margin: $size 0 $size * 0.2 0;
       font-size: $size * 1.4;
       font-weight: 500;
+
+      & .price {
+        color: $colorAtt;
+      }
     }
+
   }
 }
