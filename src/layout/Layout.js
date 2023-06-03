@@ -8,13 +8,15 @@ const Layout = () => {
     <>
       <header className={"header"}>
         <h1>Clothes shop</h1>
-        <p>Контакти</p>
+        <NavLink to={"/contacts"}><p>Контакти</p></NavLink>
       </header>
       <div className={"containerMain"}>
         <nav className={"nav"}>
           <NavLink to={"/"}><p>Каталог товарів</p></NavLink>
-          <NavLink to={"product"} state={{items: "clothing"}}><p>Одяг</p></NavLink>
-          <NavLink to={"product"} state={{items: "electronics"}}><p>Техніка</p></NavLink>
+          <NavLink to={"/product/clothing"} state={{items:"clothing"}} ><p>Одяг</p></NavLink>
+          {/*<NavLink to={"product/clothing"} state={{items: "clothing"}}><p>Одяг</p></NavLink>*/}
+          <NavLink to={"/product/electronics"} state={{items:"electronics"}}><p>Техніка</p></NavLink>
+          {/*<NavLink to={"product/electronics"} state={{items: "electronics"}}><p>Техніка</p></NavLink>*/}
         </nav>
         <main className={"main"}>
           <Outlet/>

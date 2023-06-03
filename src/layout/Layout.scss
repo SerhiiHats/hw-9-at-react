@@ -23,10 +23,18 @@ $heightFooter: $size * 10;
     font-size: $size * 5;
   }
 
+  a{
+    color: $colorDefault;
+    text-decoration: none;
+  }
+
+  .active{
+    color: $colorActive
+  }
+
   p{
     margin-right: $size;
     font-size: $size * 2;
-
   }
 }
 
