@@ -4,10 +4,18 @@ import React from 'react';
 
 const CardClothes = (props) => {
 
-  const {id, image, category, title, description, price, rating} = props;
+  const {id, image, category, title, description, price, rating, style} = props;
+
+  let singleStyle = null;
+  if (style && style === "singleStyle"){
+    singleStyle = {
+      maxWidth: "40%",
+      justifyContent: "center",
+    }
+  }
 
   return (
-    <div key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
+    <div style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
       <div className={styles.wrapClothes}>
         <img className={styles.clothesImg} src={image} alt={category} title={title}/>
         <h2 className={styles.category}>category: {category}</h2>

@@ -19,14 +19,13 @@ const SingleProductPage = () => {
 
 
   return (
-    <div>
-      SingleProductPage<br/>
+    <>
       {product &&
-        <CardClothes id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
+        <CardClothes style={"singleStyle"} id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
                      description={product.description}
                      price={product.price} rating={product.rating}/>}
-
-    </div>);
+    </>
+  );
 };
 
 export default SingleProductPage;
