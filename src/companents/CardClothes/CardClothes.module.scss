@@ -1,14 +1,15 @@
 @import "src/index";
 
 .cardClothes {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   padding: 10px;
   margin: $size * 1.5 0 $size * 2.5 0;
   max-width: $size * 30;
   background-color: lightgray;
   transition: 0.3s;
   border-radius: $size;
+
 
   &:hover {
     box-shadow: 0 0 $size $size * 0.1 gray;
