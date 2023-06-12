@@ -1,0 +1,21 @@
+@import "src/index";
+
+.error {
+  color: $colorAtt;
+  padding: $size * 2;
+  text-align: center;
+  font-size: $size * 2.5;
+  font-weight: bold;
+
+  .goHome{
+    svg{
+      fill: $colorActive;
+
+    }
+    a {
+      color: $colorActive;
+    }
+  }
+
+}
+

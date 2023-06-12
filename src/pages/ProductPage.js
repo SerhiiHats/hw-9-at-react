@@ -20,6 +20,7 @@ const ProductPage = () => {
         .then(response => setProduct(response.data.filter(item => item.category.includes(category))))
         .catch(error=>{
           console.log(error)
+          navigation('/error');
         })
 
     }, [location]);

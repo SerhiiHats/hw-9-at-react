@@ -1,5 +1,7 @@
+@import "src/index";
+
 .notFound {
-  color: black;
-  padding: 20px;
+  color: $colorDefault2;
+  padding: $size * 2;
   text-align: center;
 }
