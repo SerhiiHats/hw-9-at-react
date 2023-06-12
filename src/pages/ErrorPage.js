@@ -8,7 +8,7 @@ const ErrorPage = () => {
   return (
     <div className={styles.error}>
       <Icon type={iconTypes.cancelCircle}/>
-      <h2>Something went wrong </h2>
+      <h2>Something went wrong</h2>
       <p>Please try again in a few minutes.</p>
       <p className={styles.goHome}>Go <Link to={"/"}><Icon type={iconTypes.home}/>home</Link></p>
     </div>
