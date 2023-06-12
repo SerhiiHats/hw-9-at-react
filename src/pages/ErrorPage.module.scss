@@ -7,11 +7,20 @@
   font-size: $size * 2.5;
   font-weight: bold;
 
-  .goHome{
-    svg{
-      fill: $colorActive;
+  h2{
+    fill: $colorAtt;
+    font-size: 40px;
+  }
 
+  .goHome {
+    margin-top: $size * 3;
+
+    svg {
+      fill: $colorActive;
+      font-size: 30px;
+      margin: 0 $size * 0.5 0 $size;
     }
+
     a {
       color: $colorActive;
     }

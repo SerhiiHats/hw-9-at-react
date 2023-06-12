@@ -234,5 +234,16 @@ export const iconsDefs = {
     body: (<path
       d="M0 4v24h32v-24h-32zM6 26h-4v-4h4v4zM6 18h-4v-4h4v4zM6 10h-4v-4h4v4zM24 26h-16v-20h16v20zM30 26h-4v-4h4v4zM30 18h-4v-4h4v4zM30 10h-4v-4h4v4zM12 10v12l8-6z"></path>),
   },
+  cancelCircle: {
+    className: 'icon-cancel-circle',
+    viewBox: '0 0 32 32',
+    width: '1em',
+    height: '1em',
+    body: (<g>
+      <path
+        d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+      <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+    </g>),
+  },
 
 }
