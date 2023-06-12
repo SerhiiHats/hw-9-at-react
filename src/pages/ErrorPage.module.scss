@@ -7,6 +7,12 @@
   font-size: $size * 2.5;
   font-weight: bold;
 
+  svg {
+    fill: $colorAtt;
+    font-size: 40px;
+
+  }
+
   h2{
     fill: $colorAtt;
     font-size: 40px;
