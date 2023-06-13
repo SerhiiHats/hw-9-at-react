@@ -7,6 +7,8 @@ import Contacts from "../../pages/Contacts";
 import SingleProductPage from "../../pages/SingleProductPage";
 import NotfoundPage from "../../pages/NotfoundPage";
 import ErrorPage from "../../pages/ErrorPage";
+import Auth from "../Auth/Auth";
+import RequireAuth from "../hoc/requireAuth";
 
 function App() {
   return (
@@ -15,10 +17,19 @@ function App() {
         <Route index element={<MainPage/>}/>
         <Route path={"/product/:id"} element={<SingleProductPage/>}/>
         <Route path={"/contacts"} element={<Contacts/>}/>
-        <Route path={"/product/clothing"} element={<ProductPage/>}/>
-        <Route path={"/product/electronics"} element={<ProductPage/> }/>
+        <Route path={"/product/clothing"} element={
+          <RequireAuth>
+            <ProductPage/>
+          </RequireAuth>
+        }/>
+        <Route path={"/product/electronics"} element={
+          <RequireAuth>
+            <ProductPage/>
+          </RequireAuth>
+        }/>
         <Route path={"*"} element={<NotfoundPage/>}/>
         <Route path={"/error"} element={<ErrorPage/>}/>
+        <Route path={"/auth"} element={<Auth/>}/>
       </Route>
     </Routes>
   );
