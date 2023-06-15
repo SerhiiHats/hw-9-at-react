@@ -14,9 +14,7 @@ const Layout = () => {
         <nav className={"nav"}>
           <NavLink to={"/"}><p>Каталог товарів</p></NavLink>
           <NavLink to={"/product/clothing"} state={{items:"clothing"}} ><p>Одяг</p></NavLink>
-          {/*<NavLink to={"product/clothing"} state={{items: "clothing"}}><p>Одяг</p></NavLink>*/}
           <NavLink to={"/product/electronics"} state={{items:"electronics"}}><p>Техніка</p></NavLink>
-          {/*<NavLink to={"product/electronics"} state={{items: "electronics"}}><p>Техніка</p></NavLink>*/}
         </nav>
         <main className={"main"}>
           <Outlet/>

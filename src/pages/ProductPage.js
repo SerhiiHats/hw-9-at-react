@@ -41,7 +41,7 @@ const ProductPage = () => {
         {/*})}*/}
         {product && product.map(item => {
           return (
-            <div onClick={() => handleClickCard(item.id)}>
+            <div key={item.id} onClick={() => handleClickCard(item.id)}>
               <CardClothes id={item.id} image={item.image} category={item.category} title={item.title}
                            description={item.description}
                            price={item.price} rating={item.rating}/>

@@ -7,22 +7,23 @@
   margin: $size * 1.5 0 $size * 2.5 0;
   max-width: $size * 30;
   background-color: lightgray;
-  transition: 0.3s;
+  transition: 0.2s;
   border-radius: $size;
+  box-shadow: 0 0 $size $size * 0.1 gray;
+  opacity: 0.8;
 
 
   &:hover {
-    box-shadow: 0 0 $size $size * 0.1 gray;
-    scale: 1.04;
+    opacity: 1;
   }
 
   .wrapClothes {
-    & > img {
-      width: 100%;
-      border-radius: $size;
-    }
 
-    .clothesImg {
+
+
+      img {
+        width: 100%;
+        border-radius: $size;
 
     }
 
