@@ -17,7 +17,17 @@ function App() {
         <Route index element={<MainPage/>}/>
         <Route path={"/product/:id"} element={<SingleProductPage/>}/>
         <Route path={"/contacts"} element={<Contacts/>}/>
-        <Route path={"/product/clothing"} element={
+        <Route path={"/product/for_men"} element={
+          <RequireAuth>
+            <ProductPage/>
+          </RequireAuth>
+        }/>
+        <Route path={"/product/for_women"} element={
+          <RequireAuth>
+            <ProductPage/>
+          </RequireAuth>
+        }/>
+        <Route path={"/product/jewelery"} element={
           <RequireAuth>
             <ProductPage/>
           </RequireAuth>

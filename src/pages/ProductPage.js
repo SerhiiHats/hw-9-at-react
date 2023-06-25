@@ -17,7 +17,11 @@ const ProductPage = () => {
       // const category = urlFromState.pop();
       const category = location.state.items;
       axios(urlProduct)
-        .then(response => setProduct(response.data.filter(item => item.category.includes(category))))
+        .then(response => {
+          setProduct(response.data.filter(item => item.category === category))
+          response.data.forEach(item=>{
+            console.log(item.category)})
+        })
         .catch(error=>{
           console.log(error)
           navigation('/error');
