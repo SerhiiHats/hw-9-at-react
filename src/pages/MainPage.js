@@ -8,11 +8,10 @@ const MainPage = () => {
 
 
   const handleStartClick = () => {
-    navigation("product/clothing", {state: {items: "clothing"}});
+    navigation("product/for_men", {state: {items: "men's clothing"}});
   };
   return (
     <div onClick={() => handleStartClick()} className={"mainPage backImg"}>
-      {/*Main Page*/}
       <p>В нашому магазині лише актуальні товари</p>
     </div>
   );

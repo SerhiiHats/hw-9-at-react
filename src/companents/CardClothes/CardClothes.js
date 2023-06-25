@@ -4,7 +4,7 @@ import React from 'react';
 
 const CardClothes = (props) => {
 
-  const {id, image, category, title, description, price, rating, style} = props;
+  const {handleClickCard, id, image, category, title, description, price, rating, style} = props;
 
   let singleStyle = null;
   if (style && style === "singleStyle") {
@@ -16,7 +16,7 @@ const CardClothes = (props) => {
   }
 
   return (
-    <div style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
+    <div onClick={()=>handleClickCard(id)} style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
       <div style={singleStyle} className={styles.wrapClothes}>
         <img className={styles.clothesImg} src={image} alt={category} title={title}/>
         <div>

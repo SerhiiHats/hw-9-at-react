@@ -32,6 +32,7 @@ const ProductPage = () => {
 
     const handleClickCard = (id) => {
       navigation(`/product/${id}`);
+      console.log("click")
     }
 
     return (
@@ -45,11 +46,16 @@ const ProductPage = () => {
         {/*})}*/}
         {product && product.map(item => {
           return (
-            <div key={item.id} onClick={() => handleClickCard(item.id)}>
-              <CardClothes id={item.id} image={item.image} category={item.category} title={item.title}
+            // <div key={item.id} onClick={() => handleClickCard(item.id)}>
+              <CardClothes handleClickCard={()=>handleClickCard(item.id)}
+                           key={item.id}
+                           id={item.id} image={item.image}
+                           category={item.category}
+                           title={item.title}
                            description={item.description}
                            price={item.price} rating={item.rating}/>
-            </div>)
+           // </div>
+        )
         })}
       </div>
     );
