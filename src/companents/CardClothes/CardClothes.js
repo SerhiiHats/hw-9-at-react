@@ -9,7 +9,7 @@ const CardClothes = (props) => {
   let singleStyle = null;
   if (style && style === "singleStyle") {
     singleStyle = {
-      maxWidth: "80%",
+      maxWidth: "90%",
       justifyContent: "space-between",
       display:"flex",
     }
@@ -18,7 +18,7 @@ const CardClothes = (props) => {
   return (
     <div onClick={()=>handleClickCard(id)} style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
       <div style={singleStyle} className={styles.wrapClothes}>
-        <img className={styles.clothesImg} src={image} alt={category} title={title}/>
+        <img style={style && {width: "50%"}} className={styles.clothesImg} src={image} alt={category} title={title}/>
         <div>
           <h2 className={styles.category}>category: {category}</h2>
           <h3 className={styles.title}>{title}</h3>
