@@ -1,10 +1,10 @@
-import styles from "./CardClothes.module.scss"
+import styles from "./CardProduct.module.scss"
 
 import React from 'react';
 
 const CardClothes = (props) => {
 
-  const {handleClickCard, id, image, category, title, description, price, rating, style} = props;
+  const {id, image, category, title, description, price, rating, style} = props;
 
   let singleStyle = null;
   if (style && style === "singleStyle") {
@@ -16,7 +16,8 @@ const CardClothes = (props) => {
   }
 
   return (
-    <div onClick={()=>handleClickCard(id)} style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
+    // <div onClick={()=>handleClickCard(id)} style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
+    <div style={singleStyle} key={`item${id}`} id={`item${id}`} className={styles.cardClothes}>
       <div style={singleStyle} className={styles.wrapClothes}>
         <img style={style && {width: "50%"}} className={styles.clothesImg} src={image} alt={category} title={title}/>
         <div>

@@ -46,7 +46,7 @@ const ProductPage = () => {
         {/*})}*/}
         {product && product.map(item => {
           return (
-            // <div key={item.id} onClick={() => handleClickCard(item.id)}>
+            <div key={item.id} onClick={() => handleClickCard(item.id)}>
               <CardClothes handleClickCard={()=>handleClickCard(item.id)}
                            key={item.id}
                            id={item.id} image={item.image}
@@ -54,7 +54,7 @@ const ProductPage = () => {
                            title={item.title}
                            description={item.description}
                            price={item.price} rating={item.rating}/>
-           // </div>
+           </div>
         )
         })}
       </div>
