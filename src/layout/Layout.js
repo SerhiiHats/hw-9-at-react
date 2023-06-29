@@ -13,11 +13,10 @@ const Layout = () => {
       <div className={"containerMain"}>
         <nav className={"nav"}>
           <NavLink to={"/"}><p>Каталог товарів</p></NavLink>
-          <NavLink to={"/product/for_men"} state={{items:"men's clothing"}} ><p>men's clothing</p></NavLink>
-          <NavLink to={"/product/for_women"} state={{items:"women's clothing"}} ><p>women's clothing</p></NavLink>
-          <NavLink to={"/product/jewelery"} state={{items:"jewelery"}} ><p>jewelery</p></NavLink>
-          <NavLink to={"/product/electronics"} state={{items:"electronics"}}><p>electronics</p></NavLink>
-          {/*<NavLink to={"/product/electronics"} state={{items:"electronics"}}><p>Техніка</p></NavLink>*/}
+          <NavLink to={"/product/for_men"} state={{items:"men's clothing"}} ><p>Чоловічій одяг</p></NavLink>
+          <NavLink to={"/product/for_women"} state={{items:"women's clothing"}} ><p>Жіночій одяг</p></NavLink>
+          <NavLink to={"/product/jewelery"} state={{items:"jewelery"}} ><p>Прикраси</p></NavLink>
+          <NavLink to={"/product/electronics"} state={{items:"electronics"}}><p>Техніка</p></NavLink>
         </nav>
         <main className={"main"}>
           <Outlet/>

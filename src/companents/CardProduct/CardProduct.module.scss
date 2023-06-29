@@ -1,0 +1,61 @@
+@import "src/index";
+
+.cardProduct {
+  padding: 10px;
+  margin: $size * 1.5 0 $size * 2.5 0;
+  max-width: $size * 30;
+  background-color: lightgray;
+  transition: 0.2s;
+  border-radius: $size;
+  box-shadow: 0 0 $size $size * 0.1 gray;
+  opacity: 0.8;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  &:hover {
+    opacity: 1;
+  }
+
+    img {
+      width: 100%;
+      border-radius: $size;
+
+    }
+
+    .wrapCategory{
+
+      .category {
+        max-width: $size * 30;
+        margin: $size * 0.5 0 $size * 0.5 0;
+        font-size: $size * 1.5;
+      }
+
+      .title {
+        max-width: $size * 30;
+        margin: $size * 0.2 0 $size * 0.2 0;
+        font-weight: 500;
+        font-size: $size * 2;
+        color: $colorActive;
+      }
+
+      .description {
+        max-width: $size * 30;
+        margin: $size 0 $size * 0.2 0;
+        font-size: $size * 1.4;
+        font-weight: 400;
+      }
+
+      .wrapPrice {
+        max-width: $size * 30;
+        margin: $size 0 $size * 0.2 0;
+        font-size: $size * 1.4;
+        font-weight: 500;
+
+        & .price {
+          color: $colorAtt;
+        }
+      }
+    }
+
+}

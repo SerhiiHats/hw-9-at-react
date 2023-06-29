@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./ProductPage.module.scss"
-import CardClothes from "../companents/CardClothes/CardClothes";
+import CardProduct from "../companents/CardProduct/CardProduct";
 import axios from "axios";
 import {useLocation, useNavigate} from "react-router";
 import {Link} from "react-router-dom";
@@ -39,15 +39,15 @@ const ProductPage = () => {
       <div className={styles.containerProduct}>
         {/*{product && product.map(item => {*/}
         {/*  return <Link to={`/product/${item.id}`}>*/}
-        {/*    <CardClothes id={item.id} image={item.image} category={item.category} title={item.title}*/}
+        {/*    <CardProduct id={item.id} image={item.image} category={item.category} title={item.title}*/}
         {/*                 description={item.description}*/}
         {/*                 price={item.price} rating={item.rating}/>*/}
         {/*  </Link>*/}
         {/*})}*/}
         {product && product.map(item => {
           return (
-            <div key={item.id} onClick={() => handleClickCard(item.id)}>
-              <CardClothes handleClickCard={()=>handleClickCard(item.id)}
+            <div key={item.id} onClick={() => handleClickCard(item.id)} className={styles.wrapCardProduct}>
+              <CardProduct handleClickCard={()=>handleClickCard(item.id)}
                            key={item.id}
                            id={item.id} image={item.image}
                            category={item.category}

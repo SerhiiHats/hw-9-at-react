@@ -2,7 +2,7 @@ import styles from "./SingleProductPage.module.scss"
 
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router";
-import CardClothes from "../companents/CardClothes/CardClothes";
+import CardProduct from "../companents/CardProduct/CardProduct";
 import axios from "axios";
 
 const SingleProductPage = () => {
@@ -21,7 +21,7 @@ const SingleProductPage = () => {
   return (
     <>
       {product &&
-        <CardClothes style={"singleStyle"} id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
+        <CardProduct style={"singleStyle"} id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
                      description={product.description}
                      price={product.price} rating={product.rating}/>}
     </>
