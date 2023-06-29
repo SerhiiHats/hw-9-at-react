@@ -1,13 +1,13 @@
 import React from 'react';
 import {Outlet} from "react-router";
 import "./Layout.scss"
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
       <header className={"header"}>
-        <h1>Clothes shop</h1>
+        <Link to={"/"}><h1>Clothes shop</h1></Link>
         <NavLink to={"/contacts"}><p>Контакти</p></NavLink>
       </header>
       <div className={"containerMain"}>

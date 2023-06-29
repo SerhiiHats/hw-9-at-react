@@ -21,9 +21,11 @@ const SingleProductPage = () => {
   return (
     <>
       {product &&
-        <CardProduct style={"singleStyle"} id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
-                     description={product.description}
-                     price={product.price} rating={product.rating}/>}
+        <div className={styles.containerProduct}>
+          <CardProduct style={"singleStyle"} id={`product${product.id}`} image={product.image} category={product.category} title={product.title}
+                       description={product.description}
+                       price={product.price} rating={product.rating}/>
+        </div>}
     </>
   );
 };

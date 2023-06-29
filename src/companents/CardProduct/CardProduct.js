@@ -9,8 +9,7 @@ const CardProduct = (props) => {
   let singleStyle = null;
   if (style && style === "singleStyle") {
     singleStyle = {
-      maxWidth: "90%",
-      justifyContent: "space-between",
+      maxWidth: "100%",
       display:"flex",
     }
   }
